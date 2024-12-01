@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Software Developer</title>
+
+  <!-- Cargar Bootstrap CSS desde assets -->
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/bootstrap.min.css">
+
+  <!-- Cargar fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+
+  <!-- Cargar estilos personalizados desde assets -->
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/assets/css/animate.css">
+
+  <!-- Cargar FontAwesome -->
+  <script src="https://use.fontawesome.com/502b7294a9.js"></script>
+
+  <!-- Cargar Smooth Scroll -->
+  <script src="%PUBLIC_URL%/assets/js/smooth-scroll.polyfills.min.js"></script>
+
+  <!-- Inicialización de SmoothScroll -->
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      ignore: '[data-scroll-ignore]',
+      header: null,
+      speed: 1500,
+      offset: 0,
+      easing: 'easeInOutCubic',
+      customEasing: function (time) {
+        return time < 0.5 ? 2 * time * time : -1 + (4 - 2 * time) * time;
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- Redirección de redes sociales -->
+  <div class="red">
+    <div id="linkedin"><a href="https://www.linkedin.com/in/gustavo-auger-gac-b7aa20b2/" target="none" class="fa fa-linkedin"></a></div>
+    <div id="github"><a href="https://www.github.com/gustavoauger/" target="none" class="fa fa-github"></a></div>
+    <div id="instagram"><a href="https://www.instagram.com/nivel11_cl/" target="none" class="fa fa-instagram"></a></div>
+    <div id="twitter"><a href="" target="none" class="fa fa-twitter"></a></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top barranegra ftj">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html"><img src="%PUBLIC_URL%/assets/imagenes/gustavoLogo.png" width="80" height="80"></a>
+      <button type="button" class="navbar-toggler nabvar-togler-left" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto esp">
+          <li class="nav-item active"><a class="nav-link" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html"><i class="fa fa-globe" aria-hidden="true"></i> AboutMe</a></li>
+          <li class="nav-item"><a class="nav-link" data-scroll href="#sec-1"><i class="fa fa-rocket" aria-hidden="true"></i> Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" data-scroll href="#sec-2"><i class="fa fa-envelope" aria-hidden="true"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección principal con imagen y animaciones -->
+  <section class="wap" id="sec-2">
+    <div class="fluid bg-midnight">
+      <div class="container alto">
+        <div class="row align-items-center banner_to_right">
+          <div class="col-lg-7 index_banner_left homepage_texto">
+            <img src="%PUBLIC_URL%/assets/imagenes/gustavoLogoTxt.png" class="heading">
+            <p class="sub-heading-1"></p>
+          </div>
+          <div class="col-lg-5 text-center">
+            <div class="homepage_banner animated bounceInUp">
+              <img src="%PUBLIC_URL%/assets/imagenes/portada.png">
+            </div>
+          </div>
+        </div>
+        <!-- Particles.js -->
+        <div class="animated zoomIn" id="particles-js" style="height:100vh;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts necesarios al final del body -->
+  <!-- Cargar jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Cargar Popper.js (requerido por Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Cargar Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Cargar Particles.js -->
+  <script src="%PUBLIC_URL%/assets/js/particles.js"></script>
+
+  <!-- Scripts personalizados -->
+  <script src="%PUBLIC_URL%/assets/js/app.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/alto.js"></script>
+  <script src="%PUBLIC_URL%/assets/js/newpage.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+*{
+  box-sizing: border-box;
+}
+/***************redes sociales costado*************/
+.red{
+	position: fixed;
+	top: 200px;
+	z-index: 4;
+	left: 0;
+}
+#linkedin a{
+	background: #3b5998;
+	padding: 12px 25px;
+	color: #fff;
+	text-decoration: none;
+	width: 55px;
+	transition: all .4s ease;
+}
+#linkedin a:hover{
+	background: #000;
+	padding: 12px 50px;
+}
+#github a{
+	background: #424242;
+	padding: 12px 20px;
+	color: #fff;
+	text-decoration: none;
+	width: 55px;
+	transition: all .4s ease;
+}
+#github a:hover{
+	background: #000;
+	padding: 12px 50px;
+}
+#twitter a{
+	background: #55acee;
+	padding: 12px 20px;
+	color: #fff;
+	text-decoration: none;
+	width: 55px;
+	transition: all .4s ease;
+}
+#twitter a:hover{
+	background: #000;
+	padding: 12px 50px;
+}
+#instagram a{
+	background: #e95950;
+	padding: 12px 20px;
+	color: #fff;
+	text-decoration: none;
+	width: 55px;
+	transition: all .4s ease;
+}
+#instagram a:hover{
+	background: #000;
+	padding: 12px 50px;
+}
+
+
+
+
+
+ .wap{
+  font-family: 'Raleway', sans-serif;
+	margin: auto;
+	height: 100hv!important;
+	position:relative;
+	
+}
+ .bg-midnight{background: #03003f;
+ z-index:-1;
+height: 110vh!important;
+bottom:0;
+
+
+ }
+ .alto{height: 100vh!important;}
+ #particles-js{
+  position: relative;
+  bottom:800px;
+  width: 100%;
+  height:100vh!important;
+}
+
+ .heading{color:white;
+ z-index:90000000;}
+
+.homepage_banner{
+
+            position: relative;
+            z-index: 44;
+			top:80px;
+			
+;
+        }
+
+.homepage_banner img{width:450px;}				
+ .homepage_banner:before{
+            content: '';
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 45%;
+            left: 0px;
+            border-radius: 50%;
+            z-index: 12;
+            background: -moz-radial-gradient(center, ellipse cover, rgba(53, 15, 175, 0.5) 0%, rgba(50, 14, 167, 0.5) 7%, rgba(26, 7, 113, 0) 55%, rgba(3, 0, 63, 0) 100%);
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(53, 15, 175, 0.5) 0%, rgba(50, 14, 167, 0.5) 7%, rgba(26, 7, 113, 0) 55%, rgba(3, 0, 63, 0) 100%);
+            background: radial-gradient(ellipse at center, rgba(53, 15, 175, 0.5) 0%, rgba(50, 14, 167, 0.5) 7%, rgba(26, 7, 113, 0) 55%, rgba(3, 0, 63, 0) 100%);
+        }
+		.homepage_texto{  color:white!important;}
+ .homepage_texto:before{
+
+    content: '';
+    width: 690px;
+    height: 780px;
+    background-size: cover;
+
+    position: absolute;
+    top:-390px;
+	margin-right: auto;
+    left: -480px;
+    z-index: 1;
+    border-radius: 90px 0 0 90px;
+    background: -webkit-radial-gradient(center,ellipse cover,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+    background: -webkit-radial-gradient(center,ellipse,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+    background: radial-gradient(ellipse at center,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+}
+.logo{
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  vertical-align: top;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+.esp{ /*estilo barra de navegacion*/
+  margin-right: 8px;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+.barranegra{
+  background: rgba(0,0,0,.6);
+
+}
+.i{ /*espacio palabra-icono*/
+  margin-left: 3px;
+}
+
+
+.fofofam h1{
+  text-shadow: 2px 2px #b3b3b3ff;
+  font-family: 'Raleway', sans-serif;
+}
+.fofofam h2{
+  text-shadow: 1.5px 1.5px #b3b3b3ff;
+  font-family: 'Raleway', sans-serif;
+}
+/*estilo del pie de pagina*/
+
+
+
+.bienvenidossss{
+	margin-top: 50px;
+}
+.globol{/*conenedor de 3*/
+  width: 90%;
+	padding-top: 20px;
+}
+.algoabajo{
+  margin-bottom: 15px;
+}
+.nasx3 img{
+	width: 100%;
+}
+.nasx3 i{
+  float: left;
+	padding-right: 21px;
+	color: #444;
+}
+.fa-paper-plane{
+width:100%;
+height:100%;
+}
+/**** primer baner que cambia de colores****/
+
+.banner-1{
+	width: 100%;
+	background: #1ABC9C;
+	clear: both;
+	text-align: center;
+	transition: 0.4s;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: static;
+}
+.banner-1:hover{
+	background: #444;
+	transition: .4s;
+}
+.banner-1 h2{
+	color: #fff;
+}
+.banner-1 a{
+	text-decoration: none;
+	margin-left: 20px;
+	font-weight: bold;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+}
+.banner-1 a:hover{
+	color: #d4aa00ff;
+	border-bottom: 2px solid #d4aa00ff;
+	transition: .2s;
+
+}
+/**** segundo baner que cambia de colores****/
+
+.banner-2 h2{
+	color: #fff;
+  height: 100%;
+  width: 100%;
+}
+.banner-2 a{
+	text-decoration: none;
+	margin-left: 20px;
+	font-weight: bold;
+	color: #fff;
+	border-bottom: 2px solid #fff;
+}
+.banner-2 a:hover{
+	color: #d4aa00ff;
+	border-bottom: 2px solid #d4aa00ff;
+	transition: .2s;
+}
+
+/**** fin primer baner que cambia de colores****/
+/*tabla*/
+.tabla{
+	width: 100%;
+	margin:auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.tablax4{
+	float: left;
+	width: 25%;
+	margin-top: 20px;
+}
+.tablaxd{
+	float: left;
+	width: 25%;
+	margin-top: 10px;
+}
+.caja-precio{
+	border: 1px solid #5c6552;
+	background: #30353c;
+}
+.icono-precio{
+	color: #85c34a;
+	padding-top: 20px;
+	font-size: 3em;
+	padding-bottom: 10px;
+}
+.caja-precio h4{
+	color:#fff;
+}
+/*.caja-precio:hover{
+	border: 5px solid #85c34a;
+}*/
+.precio-1{
+	color: #85c34a;
+	font-size: 50px;
+	font-weight: bold;
+}
+.dolar{
+	font-size: 20px;
+	vertical-align: super;
+}
+.mes{
+	font-size: 10px;
+	color:#999;
+	vertical-align: text-bottom;
+}
+.lista-precios{
+	list-style: none;
+	padding: 20px 0;
+	color:#81867D;
+	padding-bottom: 50px;
+}
+.lista-espacios{
+	padding: 0.25em;
+	font-size: 15px;
+}
+.boton-contratar{
+	margin-bottom: 25px;
+}
+.contratar-a{
+	background: #85c34a;
+	text-decoration: none;
+	color:#fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 10px 70px;
+	letter-spacing: 1px;
+	width: 80%;
+}
+.contratar-a:hover{
+	background: #777;
+}
+.destacado{
+	background-color: #FFF;
+	box-shadow: 0 0 8px rgba(0,0,0,0.9);
+	z-index: 500;
+}
+.destacado h4{
+	color:#30353c;
+	font-size: 30px;
+}
+.destacado .icono-precio{
+	font-size: 4em;
+}
+.destacado .contratar-a{
+	background:#30353c;
+}
+.destacado .contratar-a:hover{
+	background:#777;
+}
+.fa-star{
+	color:#30353c;
+}
+
+/*formulario*/
+.dos-columnas{
+	margin-top: 50px;
+}
+.formulario{
+	color:#999;
+}
+.formu-ti{
+	margin-top:100px;
+	margin: 0px 20px;
+	color: #444;
+}
+.caja-1{
+	width: 250px;
+	height: 40px;
+	margin: 20px 20px;
+	padding: 10px;
+	font-size: 14px;
+}
+.caja-2{
+	width: 545px;
+	height: 100px;
+	margin: 20px 20px;
+	padding: 10px;
+	font-size: 14px;
+}
+.correr{
+	margin: 20px 20px;
+	padding: 10px;
+}
+/***************contacto*************/
+.datos{
+	color:#999;
+}
+.datos-contacto{
+	list-style: none;
+	text-align: center;
+}
+.datos-contacto li{
+	color: #444;
+	padding-bottom: 5px;
+}
+.datos-contacto li i{
+	color: #85c34a;
+  font-size:60px;
+}
+
+.espacioc{
+	padding-top: 120px;
+  color: #85c34a;
+}
+.espaciu{
+	padding-top: 120px;
+}
+.datos h4{
+  font-weight: bold;
+}
+.datos h5{
+  font-family: 'Lato', sans-serif;
+}
+/********************textos**************/
+.subtt{
+  font-family: 'Lato', sans-serif;
+}
+.labttu{
+  letter-spacing: 1px;
+}
+
+h1{
+  font-size: 4.375rem;
+}
+h2{
+  font-size: 2.1875rem;
+}
+h3{
+  font-size: 1.625rem;
+}
+h4{
+  font-size: 1.25rem;
+}
+h5{
+  font-size: 1.15rem;
+}
+h6{
+  font-size: 0.98rem;
+}
+p{
+  font-size: 0.9rem;
+}
+
+/*******************REVISAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*************/
+ 
+@media screen and (max-width: 1192px){
+  .banner-1{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
+  .datos-contacto li i{
+  font-size:60px;
+  }
+}
+@media screen and (max-width: 1024px){
+  h1{
+    font-size: 3.938rem;
+  }
+  h2{
+    font-size: 1.969rem;
+  }
+  .banner-1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  }
+  .datos-contacto li i{
+  font-size:55px;
+  }
+}
+@media screen and (max-width: 990px){
+  h1{
+    font-size: 3.444rem;
+  }
+  h2{
+    font-size: 1.772rem;
+  }
+  h5{
+    font-size: 0.98rem;
+  }
+  h6{
+  font-size: 0.9rem;
+  }
+  p{
+  font-size: 0.85rem;
+  }
+  .banner-1{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
+  .datos-contacto li i{
+  font-size:50px;
+  }
+}
+@media screen and (max-width: 768px){
+  .adaed{
+    background-attachment: initial; /* no funciona para cel */
+  }
+  .banner-2{
+  height: 150px;
+  background-attachment: initial; /* no funciona para cel */
+  }
+  .logo{
+    font-size: 30px;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  h2{
+    font-size: 1.3rem;
+  }
+  h5{
+    font-size: 0.9rem;
+  }
+  h6{
+  font-size: 0.85rem;
+  }
+  p{
+  font-size: 0.75rem;
+  }
+  .banner-1{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  .banner-1 h2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  }
+  .datos-contacto li i{
+  font-size:40px;
+  }
+  .caja-2{
+  	width: 450px;
+  }
+}
+
+@media screen and (max-width: 575px){
+  h1{
+    font-size: 2.3rem;
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+  h3{
+    font-size: 1.2rem;
+  }
+  h4{
+    font-size: 1rem;
+  }
+  h5{
+    font-size: 0.85rem;
+  }
+  h6{
+  font-size: 0.75rem;
+  }
+  p{
+  font-size: 0.65rem;
+  }
+  .banner-1{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
+  .banner-1 h2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.2rem;
+  }
+  .banner-1{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
+  .banner-2{
+  height: 100px;
+  }
+  .caja-2{
+    margin: 10px 20px;
+    width: 200px;
+  }
+  .caja-1{
+    width: 200px;
+    margin: 10px 20px;
+  }
+  .logo{
+    font-size: 20px;
+  }
+  .red{
+  font-size: 14px;
+  }
+}
+@media screen and (max-width: 530px){
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.1rem;
+  }
+  .banner-1 h2{
+  font-size: 1rem;
+  }
+  h2{
+  font-size: 1rem;
+  }
+  .banner-2{
+  height: 100px;
+  }
+  .caja-2{
+    width: 200px;
+    margin: 10px 20px;
+  }
+  .caja-1{
+  	margin: 10px 20px;
+    width: 200px;
+  }
+  .logo{
+    font-size: 20px;
+  }
+  .red{
+  font-size: 12px;
+  }
+
+}
