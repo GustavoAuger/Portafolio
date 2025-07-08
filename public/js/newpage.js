@@ -17,6 +17,7 @@
 //];
 //$.Velocity.RunSequence(loading);
 $(document).ready(function(){//comienzo de la pagina
+		$("#particles-js").css({"height":$(window).height() + "px"});
 		var ii= 0;
 		$(window).scroll(function(){
 				
