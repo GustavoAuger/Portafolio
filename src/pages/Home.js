@@ -15,7 +15,7 @@ const Home = () => {
       <SocialLinks />
       <div id="home">
         <section className="wap" id="sec-2">
-          <div className="fluid bg-midnight">
+          <div className="fluid">
             <div className="container alto">
               <div className="row align-items-center banner_to_right">
                 <div className="col-lg-7 index_banner_left homepage_texto">

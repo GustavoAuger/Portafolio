@@ -2,21 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Historia = () => {
-  const timelineItems = [
-    {
-      title: "2018 - Presente",
-      content: "Aprendí informática de manera autodidacta, enfocándome en frontend. Esto despertó mi interés por este campo. Aunque continué trabajando en Ingeniería Mecánica, complementé mi formación en informática con estudios vespertinos. Así logré consolidar mi transición hacia este ámbito."
-    },
-    {
-      title: "Actualmente",
-      content: "Me especializo en DevOps, con un enfoque integral en la creación de sistemas escalables, la automatización de procesos y la optimización del flujo de trabajo entre desarrollo y operaciones. Mi experiencia abarca desde la implementación de pipelines eficientes para CI/CD hasta la gestión de infraestructuras como código."
-    },
-    {
-      title: "Desarrollo de Software",
-      content: "También he trabajado en desarrollo de software, especialmente en backend, lo que me ha permitido adquirir una sólida comprensión de la arquitectura de sistemas y la creación de aplicaciones escalables. A través de metodologías ágiles, principalmente Scrum y Kanban, he colaborado de manera eficiente en equipos multifuncionales."
-    }
-  ];
-
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -35,53 +20,41 @@ const Historia = () => {
               Mi Historia
             </motion.h1>
 
-            <div className="timeline-container">
-              {timelineItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2 }}
-                  className="timeline-item mb-5"
-                >
-                  <div className="timeline-date">
-                    <span>{item.title}</span>
-                  </div>
-                  <div className="timeline-content">
-                    <p>{item.content}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-5"
+            >
+              <p className="lead">
+                Ingeniero Civil Mecánico titulado, pero mi verdadera pasión siempre fue la tecnología. Desde 2018, me adentré al mundo de la programación de manera autodidacta, destacando inicialmente en frontend. Este primer paso me abrió las puertas a una carrera en desarrollo de software, combinando mi experiencia en gestión industrial con la innovación tecnológica. 
+                <br/><br/>
+                Con el tiempo, la programación se convirtió en mi principal enfoque, lo que me llevó a formalizar mis estudios en este campo. Actualmente, me especializo en DevOps y desarrollo backend, donde encuentro mi verdadera vocación en la creación de sistemas robustos y la optimización de procesos.
+              </p>
+            </motion.div>
 
-            <div className="skills-container mt-5">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="row g-4"
-              >
-                <div className="col-md-6">
-                  <div className="skill-card">
-                    <h5>Habilidades Profesionales</h5>
-                    <ul>
-                      <li><i className="fa fa-check text-success me-2"></i>Implementación de pipelines CI/CD</li>
-                      <li><i className="fa fa-check text-success me-2"></i>Gestión de infraestructuras como código</li>
-                      <li><i className="fa fa-check text-success me-2"></i>Optimización de flujos de trabajo</li>
-                    </ul>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-5"
+            >
+              <h2 className="h4 mb-4">Intereses Personales</h2>
+              <div className="row justify-content-center">
+                <div className="col-12 col-md-6">
+                  <div className="interest-card p-4 mb-4">
+                    <i className="fas fa-chess-queen fa-3x mb-3"></i>
+                    <h3 className="h5 mb-3">Ajedrez</h3>
+                    <p>Practicante apasionado, disfruto de la estrategia y el desafío mental que ofrece este juego clásico.</p>
                   </div>
                 </div>
-                <div className="col-md-6">
-                  <div className="skill-card">
-                    <h5>Metodologías</h5>
-                    <ul>
-                      <li><i className="fa fa-check text-success me-2"></i>Scrum</li>
-                      <li><i className="fa fa-check text-success me-2"></i>Kanban</li>
-                      <li><i className="fa fa-check text-success me-2"></i>Metodologías ágiles</li>
-                    </ul>
+                <div className="col-12 col-md-6">
+                  <div className="interest-card p-4 mb-4">
+                    <i className="fas fa-fist-raised fa-3x mb-3"></i>
+                    <h3 className="h5 mb-3">Boxeo</h3>
+                    <p>Practicante de boxeo, valoro la disciplina y la constancia que este deporte inculca.</p>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -4,21 +4,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Historia from './pages/Historia';
+import Stacks from './pages/Stacks';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/historia" element={<Historia />} />
-              </Routes>
-            </div>
-          </div>
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/historia" element={<Historia />} />
+            <Route path="/stacks" element={<Stacks />} />
+          </Routes>
         </div>
       </div>
     </Router>
