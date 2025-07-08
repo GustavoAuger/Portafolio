@@ -13,26 +13,23 @@ const Stacks = () => {
       icon: "fas fa-cogs"
     },
     {
-      title: "Backend",
+      title: "Development",
       technologies: [
-        "Python (Django, Flask, FastAPI)", "Java (Spring Boot)",
-        "PHP (Laravel)", "C# (.NET Core)"
+        {
+          title: "Backend",
+          technologies: [
+            "Python (Django, Flask, FastAPI)", "Java (Spring Boot)",
+            "PHP (Laravel)", "C# (.NET Core)"
+          ]
+        },
+        {
+          title: "Frontend",
+          technologies: [
+            "HTML , CSS , Sass", "JavaScript (React, Vue.js, Angular)", "TypeScript"
+          ]
+        }
       ],
       icon: "fas fa-code"
-    },
-    {
-      title: "Frontend",
-      technologies: [
-        "HTML", "CSS", "Sass", "JavaScript (React, Vue.js, Angular)", "TypeScript"
-      ],
-      icon: "fas fa-laptop-code"
-    },
-    {
-      title: "Cloud",
-      technologies: [
-        "AWS", "Oracle Cloud", "Azure"
-      ],
-      icon: "fas fa-cloud"
     },
     {
       title: "Bases de Datos",
@@ -42,6 +39,13 @@ const Stacks = () => {
         "AWS DynamoDB", "Aurora DB", "MongoDB"
       ],
       icon: "fas fa-database"
+    },
+    {
+      title: "Cloud",
+      technologies: [
+        "AWS", "Oracle Cloud", "Azure"
+      ],
+      icon: "fas fa-cloud"
     }
   ];
 
@@ -79,14 +83,30 @@ const Stacks = () => {
                     <h3 className="stack-title">{item.title}</h3>
                   </div>
                   <div className="stack-content">
-                    <ul className="stack-list">
-                      {item.technologies.map((tech, techIndex) => (
-                        <li key={techIndex} className="stack-item">
-                          <span className="stack-item-dot"></span>
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
+                    {item.technologies.map((tech, techIndex) => (
+                      <div key={techIndex}>
+                        {typeof tech === 'object' ? (
+                          <div>
+                            <h4 className="stack-subtitle">{tech.title}</h4>
+                            <ul className="stack-list">
+                              {tech.technologies.map((subTech, subTechIndex) => (
+                                <li key={subTechIndex} className="stack-item">
+                                  <span className="stack-item-dot"></span>
+                                  {subTech}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : (
+                          <ul className="stack-list">
+                            <li className="stack-item">
+                              <span className="stack-item-dot"></span>
+                              {tech}
+                            </li>
+                          </ul>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </motion.div>
               ))}
