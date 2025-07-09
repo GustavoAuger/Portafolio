@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const SocialLinks = () => {
   return (
     <div className="red">
@@ -8,7 +9,7 @@ const SocialLinks = () => {
           href="https://www.linkedin.com/in/gustavo-auger-gac/"
           target="_blank"
           rel="noopener noreferrer"
-          className="fa fa-linkedin"
+          className="fab fa-linkedin"
           aria-label="LinkedIn"  
           aria-hidden="true" 
         > </a>
@@ -18,7 +19,7 @@ const SocialLinks = () => {
           href="https://www.github.com/gustavoauger/"
           target="_blank"
           rel="noopener noreferrer"
-          className="fa fa-github"
+          className="fab fa-github"
           aria-label="GitHub" 
           aria-hidden="true" 
         > </a>
@@ -28,7 +29,7 @@ const SocialLinks = () => {
           href="https://www.instagram.com/nivel11_cl/"
           target="_blank"
           rel="noopener noreferrer"
-          className="fa fa-instagram"
+          className="fab fa-instagram"
           aria-label="Instagram"  
           aria-hidden="true" 
         > </a>
@@ -38,7 +39,7 @@ const SocialLinks = () => {
           href="https://twitter.com/"  
           target="_blank"
           rel="noopener noreferrer"
-          className="fa fa-twitter"
+          className="fab fa-twitter"
           aria-label="Twitter"  
           aria-hidden="true" 
         > </a>

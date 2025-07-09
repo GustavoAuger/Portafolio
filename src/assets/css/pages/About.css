@@ -1,0 +1,37 @@
+/* Estilos específicos para la página About */
+.about-section {
+  padding: 5rem 0;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-title {
+  color: #00ff00;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-text {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #00ff00 0%, #003366 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.about-button:hover {
+  transform: translateY(-3px);
+}

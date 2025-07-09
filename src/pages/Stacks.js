@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SocialLinks from '../components/SocialLinks';
+import '../assets/css/pages/Stacks.css';
 
 const Stacks = () => {
   const stackItems = [

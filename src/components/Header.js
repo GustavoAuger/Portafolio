@@ -23,7 +23,7 @@ const Navbar = () => {
           <ul className="navbar-nav ml-auto esp">
             <li className="nav-item active">
               <Link className="nav-link" to="/">
-                <i className="fa fa-home" aria-hidden="true"></i> Portada
+                <i className="fa fa-home" aria-hidden="true"></i> Inicio
               </Link>
             </li>
             <li className="nav-item">
@@ -42,7 +42,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <Link className="nav-link" to="/contacto">
                 <i className="fa fa-handshake" aria-hidden="true"></i> Trabajemos Juntos
               </Link>
             </li>

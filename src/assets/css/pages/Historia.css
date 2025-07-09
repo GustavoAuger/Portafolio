@@ -1,0 +1,63 @@
+/* Estilos específicos para la página Historia */
+.history-section {
+  padding: 5rem 0;
+}
+
+.history-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: rgba(0, 255, 0, 0.2);
+}
+
+.history-item {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.history-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.history-date {
+  color: #00ff00;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.history-content {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.history-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #00ff00;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.history-item:nth-child(odd) .history-marker {
+  left: -10px;
+}
+
+.history-item:nth-child(even) .history-marker {
+  right: -10px;
+}
