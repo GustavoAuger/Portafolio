@@ -28,7 +28,14 @@ const Historia = () => {
               className="mb-5"
             >
               <p className="lead">
-                Ingeniero Civil Mecánico titulado, pero mi verdadera pasión siempre fue la tecnología. Desde 2018, me adentré al mundo de la programación de manera autodidacta, destacando inicialmente en frontend. Este primer paso me abrió las puertas a una carrera en desarrollo de software, combinando mi experiencia en gestión industrial con la innovación tecnológica. 
+              Durante mis primeros años laborales, mientras encontraba trabajos esporádicos como ingeniero, me formé de manera autodidacta en desarrollo web. Esto me llevó a conseguir mi primer empleo como desarrollador front-end, una experiencia que confirmó lo que ya sospechaba: me había equivocado de carrera.
+
+Poco después, y tras convertirme en padre, opté por una mejor oportunidad laboral dentro del rubro de la ingeniería, pero con la decisión firme de formalizar mi formación en tecnología. Al finalizar la pandemia, comencé a estudiar de forma vespertina la carrera de Analista Programador.
+
+Hoy en día estoy titulado en ambas disciplinas —Ingeniería Civil Mecánica y Analista Programador— y me especializo en desarrollo backend y DevOps. He complementado mi formación con becas como la de Desafío Latam y Globant (DevOps), y actualmente curso un programa de Arquitectura Cloud a través de Talento Digital. Además, sigo aprendiendo por mi cuenta, lo que me ha permitido certificarme en tecnologías como Python, Java, Azure, GitHub y Ciberseguridad.
+
+Fuera del ámbito profesional, me apasiona el ajedrez y practico boxeo como disciplina. Estas aficiones, al igual que la tecnología, han fortalecido mi perseverancia, enfoque y toma de decisiones.
+Soy también padre de dos hijos, lo que me motiva aún más a crecer día a día, tanto personal como profesionalmente.
                 <br/><br/>
                 Con el tiempo, la programación se convirtió en mi principal enfoque, lo que me llevó a formalizar mis estudios en este campo. Actualmente, me especializo en DevOps y desarrollo backend, donde encuentro mi verdadera vocación en la creación de sistemas robustos y la optimización de procesos.
               </p>

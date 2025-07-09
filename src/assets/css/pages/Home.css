@@ -3,6 +3,14 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.text-devops.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .main-heading {
@@ -10,6 +18,14 @@
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-heading.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .description {
@@ -17,14 +33,24 @@
   font-size: 1.5rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.description.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .whatsapp-button {
   margin-top: 2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .button-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   background: linear-gradient(135deg, #00ff00 0%, #003366 100%);
   padding: 0.8rem 1.5rem;
@@ -32,27 +58,122 @@
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
-  gap: 0.8rem;
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+  text-decoration: none;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.button-container:hover::before {
+  left: 100%;
 }
 
 .button-container:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
 }
 
-.button-container span {
+.whatsapp-text {
   color: white;
   font-size: 1.1rem;
   font-weight: 600;
+  margin-right: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.button-container:hover .whatsapp-text {
+  color: #00ff00;
 }
 
 .whatsapp-icon {
-  color: #003366;
-  font-size: 1.3rem;
-  transition: transform 0.3s ease;
+  color: #e3e6e9;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
 }
 
 .button-container:hover .whatsapp-icon {
-  transform: scale(1.1);
+  color: #00ff00;
+  transform: scale(1.2) rotate(10deg);
+}
+.wap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle; 
+    justify-content: center;
+
+  }
+  
+  .index_banner_left {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+
+    margin: 0 auto;
+    max-width: 700px;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+
+  }
+  /* imagen*/
+ .homepage_banner img{width:500px;}				
+
+
+ .homepage_texto:before{
+
+    content: '';
+    width: 1690px;
+    height: 1780px;
+    background-size: cover;
+    position: absolute;
+    top:-320px;
+	  margin-right: auto;
+    left: -200px;
+    z-index: 1;
+    border-radius: 90px 0 0 90px;
+    background: -webkit-radial-gradient(center,ellipse cover,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+    background: -webkit-radial-gradient(center,ellipse,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+    background: radial-gradient(ellipse at center,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+    pointer-events: none;
+  }
+.homepage_banner{
+  z-index: 1;
+  top:280px;
+}
+.link-container {
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  cursor: pointer;
+
+}
+
+.link-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.link-container:hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+.link-container:hover .link-sobre-mi {
+  color: #00ff00;
 }
