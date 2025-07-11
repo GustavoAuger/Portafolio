@@ -64,10 +64,10 @@
 
 .historia-section {
   position: relative;
-  min-height: 80vh;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)),
+  min-height: 100vh;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 1)),
               url('../../imagenes/gustavo.png');
-  background-size: 45%;
+  background-size: 35%;
   background-position: left ;
   background-repeat: no-repeat;
   background-attachment: fixed;

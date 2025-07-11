@@ -39,7 +39,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/projects">
+                  <Link className="nav-link" to="/proyectos">
                     <i className="fa fa-code" aria-hidden="true"></i> Proyectos
                   </Link>
                 </li>

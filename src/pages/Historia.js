@@ -38,25 +38,7 @@ export default function Historia({ onPrev, onNext }) {
         </div>
       </div>
 
-      {/* Flechas de navegación */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-between px-10 z-20">
-        <button
-          onClick={onPrev}
-          className="text-white text-3xl hover:text-green-400 transition p-2 rounded-full bg-black/30 hover:bg-black/50 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black/30"
-          aria-label="Anterior sección"
-          tabIndex="0"
-        >
-          ←
-        </button>
-        <button
-          onClick={onNext}
-          className="text-white text-3xl hover:text-green-400 transition p-2 rounded-full bg-black/30 hover:bg-black-50 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black/30"
-          aria-label="Siguiente sección"
-          tabIndex="0"
-        >
-          →
-        </button>
-      </div>
+
     </section>
   );
 }

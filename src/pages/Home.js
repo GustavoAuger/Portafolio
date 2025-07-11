@@ -37,7 +37,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-
+      <section>
       <SocialLinks />
       <div id="home">
         <section className="wap" id="sec-2">
@@ -76,6 +76,7 @@ const Home = () => {
           </div>
         </section>
       </div>
+          </section>
     </div>
   );
 };

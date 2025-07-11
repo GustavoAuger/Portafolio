@@ -5,6 +5,8 @@ import '../assets/css/pages/Contacto.css';
 
 const Contacto = () => {
   return (
+    <section> 
+        <SocialLinks />
     <motion.div
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
@@ -65,12 +67,13 @@ const Contacto = () => {
               animate={{ opacity: 1, y: 0 }}
               className="mb-5"
             >
-              <SocialLinks />
+            
             </motion.div>
           </div>
         </div>
       </div>
     </motion.div>
+    </section>
   );
 };
 
