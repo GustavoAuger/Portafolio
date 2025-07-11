@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
-import Header from '../components/Header';
 import SocialLinks from '../components/SocialLinks';
 import portada from '../assets/imagenes/portada.png';
 import '../assets/css/pages/Home.css';
@@ -38,7 +37,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <Header />
+
       <SocialLinks />
       <div id="home">
         <section className="wap" id="sec-2">

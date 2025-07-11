@@ -61,3 +61,43 @@
 .history-item:nth-child(even) .history-marker {
   right: -10px;
 }
+
+.historia-section {
+  position: relative;
+  min-height: 80vh;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1)),
+              url('../../imagenes/gustavo.png');
+  background-size: 45%;
+  background-position: left ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 100px;
+  bottom: 0px;
+}
+
+.historia-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.historia-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #00ff00;
+}
+
+.historia-text {
+  color: white;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.social-links-container {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
