@@ -65,34 +65,40 @@
 .historia-section {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 1)),
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.81)),
               url('../../imagenes/gustavo.png');
-  background-size: 35%;
-  background-position: left ;
+  background-size: 20%;
+  background-position: 10% center;
+
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   bottom: 0px;
 }
+
 
 .historia-content {
   position: relative;
   z-index: 1;
-  padding: 4rem;
-  max-width: 600px;
-  margin: 0 auto;
+  left: 540px;
+  margin-top: 100px !important;
+  width: 40%; /* Ajustamos el ancho para que el contenido no se extienda demasiado */
 }
 
 .historia-title {
-  font-size: 2.5rem;
   margin-bottom: 2rem;
+  justify-content: left!important;
   color: #00ff00;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: calc(1.475rem + 2.7vw);
+  text-align: left;
 }
 
 .historia-text {
   color: white;
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1.35rem!important;
 }
 
 .social-links-container {
@@ -100,4 +106,63 @@
   bottom: 2rem;
   right: 2rem;
   z-index: 2;
+  font-size: 0.95rem;
+}
+
+.historia-content:before{
+
+  content: '';
+  width: 1690px;
+  height: 1780px;
+  background-size: cover;
+  position: absolute;
+  top:-450px;
+  margin-right: auto;
+  left: -490px;
+  z-index: 1;
+  border-radius: 90px 0 0 90px;
+  background: -webkit-radial-gradient(center,ellipse cover,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+  background: -webkit-radial-gradient(center,ellipse,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+  background: radial-gradient(ellipse at center,rgba(53,15,175,.5) 0,rgba(50,14,167,.5) 7%,rgba(26,7,113,0) 55%,rgba(3,0,63,0) 100%);
+  pointer-events: none;
+}
+
+/* Estilos para las cards */
+.historia-card {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  transition: all 0.3s ease;
+
+}
+
+.historia-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+.historia-card img {
+  transition: transform 0.3s ease;
+}
+
+.historia-card:hover img {
+  transform: scale(1.1);
+}
+
+.historia-card h3 {
+  color: #00ff00;
+  margin: 1rem 0;
+}
+
+.historia-card p {
+  color: #87ceeb;
+  line-height: 1.6;
+}
+.cardss{
+  width: 20%;
+}
+@media (max-width: 768px) {
+  .historia-content {
+    max-width: 100%;
+  }
 }

@@ -1,0 +1,852 @@
+/* Estilos para la sección de Proyectos */
+.proyectos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+  min-height: 100vh;
+  padding-top: 4rem;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #00ff00;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.titulo-seccion::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ff00, transparent);
+}
+
+/* Estilos para los botones de categoría */
+.categorias {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.categoria-btn {
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.categoria-btn:hover {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+.categoria-btn.activo {
+  background: #00ff00;
+  color: #0a192f;
+}
+
+/* Estilos para las tarjetas de proyectos de desarrollo */
+.proyecto-card {
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.proyecto-card.expandido {
+  box-shadow: 0 5px 25px rgba(0, 255, 0, 0.2);
+}
+
+.proyecto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.proyecto-header:hover {
+  background: rgba(0, 255, 0, 0.05);
+}
+
+.proyecto-header h3 {
+  margin: 0;
+  color: #00ff00;
+  font-size: 1.3rem;
+}
+
+.toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ff00;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card.expandido .toggle-icon {
+  transform: rotate(45deg);
+}
+
+.proyecto-contenido {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.proyecto-card.expandido .proyecto-contenido {
+  padding: 0 1.5rem 2rem;
+  max-height: 2000px; /* Ajusta según sea necesario */
+}
+
+/* Galería de imágenes */
+.proyecto-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.proyecto-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.proyecto-imagen:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+/* Tecnologías */
+.proyecto-tecnologias {
+  margin: 1.5rem 0;
+}
+
+.proyecto-tecnologias strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #00ff00;
+}
+
+.tecnologias-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tecnologia-tag {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  margin-right: 5px;
+  margin-bottom:5px;
+  display: inline-flex
+
+}
+
+/* Enlaces */
+.proyecto-enlaces {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.enlace-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.enlace-btn:hover {
+  background: #00ff00;
+  color: #0a192f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+.enlace-btn.github {
+  border-color: #6e5494;
+  color: #6e5494;
+}
+
+.enlace-btn.github:hover {
+  background: #6e5494;
+  color: white;
+  box-shadow: 0 5px 15px rgba(110, 84, 148, 0.3);
+}
+
+/* Estilos para las tarjetas de DevOps */
+.proyectos-devops {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.proyecto-devops-card {
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+.proyecto-devops-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
+}
+
+.devops-icono {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #00ff00;
+}
+
+.proyecto-devops-card h3 {
+  color: #00ff00;
+  margin-bottom: 1rem;
+}
+
+.proyecto-devops-card p {
+  color: #ccd6f6;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Estilos para los botones de acción en DevOps */
+.devops-acciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.accion-btn {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 0.5rem;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 8px;
+  color: #00ff00;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.accion-btn:hover {
+  background: rgba(0, 255, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.1);
+}
+
+.accion-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .proyectos-container {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+  
+  .proyectos-devops {
+    grid-template-columns: 1fr;
+  }
+  
+  .proyecto-galeria {
+    grid-template-columns: 1fr;
+  }
+  
+  .proyecto-enlaces {
+    flex-direction: column;
+  }
+  
+  .enlace-btn {
+    width: 100%;
+  }
+  
+  .devops-acciones {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .accion-btn {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.6rem 1rem;
+    gap: 0.8rem;
+  }
+  
+  .accion-icon {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+}
+
+/* Efectos de animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.proyecto-card, .proyecto-devops-card {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Añadir un pequeño retraso a cada tarjeta para un efecto de cascada */
+.proyecto-card:nth-child(1) { animation-delay: 0.1s; }
+.proyecto-card:nth-child(2) { animation-delay: 0.2s; }
+.proyecto-card:nth-child(3) { animation-delay: 0.3s; }
+.proyecto-card:nth-child(4) { animation-delay: 0.4s; }
+.proyecto-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Estilos para el visor de PDF */
+.pdf-viewer-container {
+  width: 100%;
+  min-height: 600px;
+  position: relative;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  background: white;
+}
+
+.pdf-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-body {
+  padding: 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Botón de descarga */
+.btn-outline-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pdf-viewer-container,
+  .pdf-iframe {
+    height: 500px;
+  }
+  
+  .modal-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 576px) {
+  .pdf-viewer-container,
+  .pdf-iframe {
+    height: 400px;
+  }
+}
+
+/* Estilos para el visor de PDF con Google Docs Viewer */
+.pdf-viewer {
+  max-width: 90%;
+  width: 800px;
+  max-height: 90vh;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1rem;
+  background: #1a1a1a;
+  
+}
+
+.pdf-container .react-pdf__Document {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  background: #2a2a2a;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.pdf-container .react-pdf__Page {
+  margin: 0.5rem 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  max-width: 100%;
+}
+
+.pdf-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: #222;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.pdf-controls button {
+  background: #00a86b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pdf-controls button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.pdf-controls button:not(:disabled):hover {
+  background: #00c27e;
+}
+
+.pdf-download {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.pdf-download .enlace-btn {
+  display: inline-block;
+  background: #2c5282;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.pdf-download .enlace-btn:hover {
+  background: #2b6cb0;
+}
+
+.pdf-loading,
+.pdf-error {
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .pdf-viewer {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .pdf-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .pdf-container .react-pdf__Page {
+    transform: scale(0.9);
+  }
+}
+
+/* Estilos para el mensaje de vista previa no disponible */
+.pdf-fallback {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  border: 1px dashed #dee2e6;
+}
+
+.pdf-fallback .alert {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  text-align: left;
+}
+
+.pdf-fallback h5 {
+  color: #0c5460;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.pdf-fallback p {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.pdf-fallback .btn {
+  min-width: 200px;
+  margin: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-fallback h6 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Mejoras para el contenedor del PDF */
+.pdf-viewer-container {
+  position: relative;
+  min-height: 400px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-viewer-container .alert {
+  margin: 1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .pdf-fallback {
+    padding: 1.5rem 1rem;
+  }
+  
+  .pdf-fallback .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Estilos para el modal del diagrama */
+.modal-diagrama-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-diagrama-contenido {
+  background: #0a192f;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90vh;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 50px rgba(0, 255, 0, 0.2);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  transform: translateY(20px);
+  animation: modalSlideIn 0.3s ease-out forwards;
+  overflow: hidden;
+}
+
+@keyframes modalSlideIn {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.modal-diagrama-header {
+  padding: 1.25rem 1.5rem;
+  background: rgba(10, 25, 47, 0.9);
+  border-bottom: 1px solid rgba(0, 255, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-diagrama-titulo {
+  margin: 0;
+  color: #00ff00;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.modal-diagrama-cerrar {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.modal-diagrama-cerrar:hover {
+  color: #00ff00;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: #00ff00;
+  transform: rotate(90deg);
+}
+
+.modal-diagrama-cuerpo {
+  padding: 1.5rem;
+  overflow: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a192f;
+  position: relative;
+}
+
+.diagrama-contenedor {
+  position: relative;
+  max-width: 100%;
+  max-height: calc(90vh - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diagrama-imagen {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.diagrama-imagen.cargado {
+  opacity: 1;
+}
+
+.diagrama-cargando {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #64ffda;
+  transition: opacity 0.3s ease;
+}
+
+.diagrama-imagen.cargado + .diagrama-cargando {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-diagrama-footer {
+  padding: 1.25rem 1.5rem;
+  background: rgba(10, 25, 47, 0.9);
+  border-top: 1px solid rgba(0, 255, 0, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .modal-diagrama-contenido {
+    max-width: 95%;
+    max-height: 95vh;
+  }
+  
+  .modal-diagrama-header {
+    padding: 1rem;
+  }
+  
+  .modal-diagrama-titulo {
+    font-size: 1.1rem;
+  }
+  
+  .modal-diagrama-cuerpo {
+    padding: 1rem;
+  }
+  
+  .diagrama-contenedor {
+    max-height: calc(95vh - 160px);
+  }
+  
+  .modal-diagrama-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .modal-diagrama-footer .btn {
+    width: 100%;
+  }
+}
+
+/* Efecto de zoom al hacer hover en la imagen */
+.diagrama-imagen {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: zoom-in;
+}
+
+.diagrama-imagen.zoom {
+  transform: scale(1.5);
+  cursor: zoom-out;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Scrollbar personalizado para el modal */
+.modal-diagrama-cuerpo::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.modal-diagrama-cuerpo::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.modal-diagrama-cuerpo::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 0, 0.3);
+  border-radius: 4px;
+}
+
+.modal-diagrama-cuerpo::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 0, 0.5);
+}
