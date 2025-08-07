@@ -291,7 +291,7 @@ const proyectosDevOps = [
     icono: '🛡️',
     diagrama: diagramaVPC,
     manualPdf: ManualRedesEC2NAT,
-    codigoTerraform: 'https://github.com/tuusuario/vpc-segura-terraform'
+    codigoTerraform: 'https://github.com/GustavoAuger/Arquitectura-VPC-Segura-en-AWS/tree/main'
   },
   {
     id: 2,
@@ -320,8 +320,7 @@ export default function Proyectos() {
     // Configuración del worker para react-pdf
     pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
     
-    // Si la anterior no funciona, usa esta:
-    // pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    
   }, []);
 
   // Función para abrir el modal con la imagen del diagrama
@@ -358,7 +357,8 @@ export default function Proyectos() {
   };
 
   return (
-    <section className="proyectos-container">
+    <section className="proyecto">
+    <div className="proyectos-container">
       {/* Modal para el diagrama */}
       <ModalDiagrama 
         isOpen={modalAbierto} 
@@ -505,6 +505,7 @@ export default function Proyectos() {
           </div>
         )}
       </div>
+    </div>
     </section>
   );
 }

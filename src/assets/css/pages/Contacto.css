@@ -1,50 +1,113 @@
 /* Estilos específicos para la página Contacto */
-.contact-section {
-  padding: 5rem 0;
-  background: rgba(0, 0, 0, 0.8);
+.contacto {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../imagenes/contacto.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  padding: 2rem 0;
 }
 
-.contact-container {
-  max-width: 800px;
-  margin: 0 auto;
+.contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
 }
 
-.contact-title {
-  color: #00ff00;
-  font-size: 3rem;
-  margin-bottom: 3rem;
-  text-align: center;
+.contacto .container {
+  position: relative;
+  z-index: 2;
 }
 
 .contact-form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
 .contact-input,
 .contact-textarea {
   width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1rem;
+  border: 1px solid #495057;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
   color: white;
   font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #00ff00;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+  outline: none;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #6c757d;
+  opacity: 1;
 }
 
 .contact-button {
   width: 100%;
-  padding: 1.2rem;
-  background: linear-gradient(135deg, #00ff00 0%, #003366 100%);
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #FF00D9 0%, #003366 100%);
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   cursor: pointer;
   font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.3s ease;
 }
 
 .contact-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+.contact-button:active {
+  transform: translateY(-1px);
+}
+
+/* Estilos para los iconos de contacto */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Asegurar que el texto sea legible sobre el fondo */
+.text-white {
+  color: #ffffff !important;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 1.5rem 0;
+  }
+  
+  .contacto::before {
+    background: rgba(0, 0, 0, 0.9);
+  }
 }
