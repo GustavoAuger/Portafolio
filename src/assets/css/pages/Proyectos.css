@@ -130,7 +130,7 @@
 .proyecto-contenido {
   padding: 0 1.5rem;
   max-height: 0;
-  overflow: hidden;
+
   transition: max-height 0.5s ease, padding 0.5s ease;
 }
 
@@ -238,7 +238,7 @@
 .proyecto-devops-card {
   background: rgba(10, 25, 47, 0.7);
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 255, 0, 0.2);

@@ -30,7 +30,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/historia">
-                    <i className="fa fa-user" aria-hidden="true"></i> Mi Historia
+                    <i className="fa fa-user" aria-hidden="true"></i> Sobre Mí
                   </Link>
                 </li>
                 <li className="nav-item">

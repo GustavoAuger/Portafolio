@@ -52,17 +52,17 @@
 }
 
 .imagen-perfil {
-  width: 350px; /* Tamaño fijo para hacerlo cuadrado */
-  height: 350px; /* Mismo valor que el ancho para hacerlo cuadrado */
+  width: 350px; 
+  height: 350px; 
   background-image: url('../../imagenes/gustavo1.png');
-  background-size: cover; /* Cambiado de 'contain' a 'cover' para llenar el contenedor */
-  background-position: center top; /* Ajusta según necesites la posición de la imagen */
+  background-size: cover; 
+  background-position: center top; 
   background-repeat: no-repeat;
   border-radius: 50%; /* Hace que la imagen sea circular */
-  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); /* Sombra más pronunciada */
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
   border: 1px solid rgba(0, 255, 0, 0.1);
 
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  object-fit: cover; 
   aspect-ratio: 1/1; /* Mantiene la relación de aspecto 1:1 */
 }
 
@@ -71,13 +71,16 @@
   flex: 0 0 50%;
   /*backdrop-filter: blur(10px);*/
   border-radius: 1rem;
-  padding: 2rem;
+  padding-top: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(74, 222, 128, 0.1);
   max-height: 80vh;
   overflow-y: auto;
   background: rgba(10, 25, 47, 0.7);
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 /* Barra de desplazamiento personalizada */
@@ -157,10 +160,28 @@
   font-weight: 600;
 }
 
+.text-content {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  max-width: 100%;
+}
+
 .text-content p {
   margin-bottom: 1.5rem;
-  line-height: 1.7;
-  color: #e5e7eb;
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.text-content p {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+.text-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Estilos para la sección de intereses */

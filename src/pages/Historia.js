@@ -11,10 +11,10 @@ const Historia = () => {
       <div className="tab-pane">
         <h1>Mi Historia</h1>
         <div className="text-content">
-          <p>¡Hola! Soy Gustavo, un apasionado por la tecnología y el desarrollo de software. Mi viaje en el mundo de la programación comenzó cuando descubrí el poder de transformar ideas en soluciones digitales.</p>
-          <p>Con una formación en Ingeniería Civil Mecánica, siempre me ha fascinado la resolución de problemas y el diseño de soluciones eficientes. Sin embargo, mi verdadera pasión por la programación se despertó al descubrir cómo podía combinar mi pensamiento lógico con la creatividad para crear aplicaciones que impacten positivamente en la vida de las personas.</p>
-          <p>Mi enfoque se centra en el desarrollo web full-stack, con especial interés en crear experiencias de usuario excepcionales y aplicaciones escalables. Me encanta aprender nuevas tecnologías y metodologías que me permitan mejorar mis habilidades y ofrecer soluciones innovadoras.</p>
-          <p>Fuera del mundo del código, disfruto del ajedrez, el boxeo y los videojuegos en equipo, actividades que no solo me permiten desconectar, sino que también me ayudan a desarrollar habilidades como el pensamiento estratégico, la disciplina y el trabajo en equipo.</p>
+          <p>¡Hola! Soy Gustavo, Ingeniero Civil Mecánico de formación, pero mi verdadera pasión es la tecnología. Desde mis primeros experimentos con Arduino, supe que el mundo digital me ofrecería los desafíos intelectuales que buscaba. En la ingeniería mecánica en Chile, sentía que no alcanzaba mi máximo potencial, por lo que decidí cambiarme a la programación y tecnología informática.</p>
+          <p>Comencé de forma autodidacta, especializándome en frontend, y me di cuenta de que la programación era mi vocación. Al finalizar la pandemia, decidí formalizar mis estudios y obtuve el título de Analista Programador Computacional.</p>
+          <p>Me certifiqué con títulos oficiales en diversas tecnologías y actualmente mi enfoque está en el desarrollo backend y las prácticas de DevOps, aunque también tengo una sólida base en frontend.</p>
+          <p>La tecnología está en constante cambio y mi motivación es seguir aprendiendo y mejorando. Siempre busco optimizar mis procesos y mantenerme actualizado con nuevas tecnologías para aplicar soluciones efectivas en cada área.</p>
         </div>
       </div>
     ),
@@ -125,7 +125,7 @@ const Historia = () => {
           <div className="interest-card">
             <div className="icon">♟️</div>
             <h3>Ajedrez</h3>
-            <p>El ajedrez es mi pasatiempo favorito. Me encanta cómo este juego estratégico desafía mi mente y me ayuda a mejorar mi capacidad de análisis y toma de decisiones.</p>
+            <p>El ajedrez es uno de mis pasatiempos favoritos. Desafía mi mente y me ayuda a mejorar mi capacidad de análisis y toma de decisiones.</p>
           </div>
           <div className="interest-card">
             <div className="icon">🥊</div>
@@ -135,7 +135,7 @@ const Historia = () => {
           <div className="interest-card">
             <div className="icon">🎮</div>
             <h3>Videojuegos en Equipo</h3>
-            <p>Disfruto jugar videojuegos multijugador que fomentan el trabajo en equipo y la comunicación, habilidades que también aplico en el desarrollo de software.</p>
+            <p>Disfruto jugar videojuegos multijugador con amigos, a la vez que fomentan el trabajo en equipo y la comunicación, habilidades clave para el desarrollo de software.</p>
           </div>
           <div className="interest-card">
             <div className="icon">🥾</div>
