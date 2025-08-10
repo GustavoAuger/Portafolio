@@ -1,8 +1,422 @@
 /* Estilos específicos para la página Historia */
-.history-section {
-  padding: 5rem 0;
+
+
+.historia-section{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../imagenes/sobremi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  padding: 2rem 0;
+  
+}
+.historia-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
 }
 
+
+
+
+/* Contenedor principal de dos columnas */
+.historia-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 4rem);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+
+/* Columna de la imagen */
+.imagen-col {
+  flex: 0 0 40%;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.imagen-perfil {
+  width: 350px; /* Tamaño fijo para hacerlo cuadrado */
+  height: 350px; /* Mismo valor que el ancho para hacerlo cuadrado */
+  background-image: url('../../imagenes/gustavo1.png');
+  background-size: cover; /* Cambiado de 'contain' a 'cover' para llenar el contenedor */
+  background-position: center top; /* Ajusta según necesites la posición de la imagen */
+  background-repeat: no-repeat;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); /* Sombra más pronunciada */
+  border: 1px solid rgba(0, 255, 0, 0.1);
+
+  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+  aspect-ratio: 1/1; /* Mantiene la relación de aspecto 1:1 */
+}
+
+/* Columna del contenido */
+.contenido-col {
+  flex: 0 0 50%;
+  /*backdrop-filter: blur(10px);*/
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(74, 222, 128, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(10, 25, 47, 0.7);
+  margin-top: 50px;
+}
+
+/* Barra de desplazamiento personalizada */
+.contenido-col::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contenido-col::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.contenido-col::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 0, 0.3);
+  border-radius: 4px;
+}
+.contenido-col::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 0, 0.5);
+}
+
+
+/* Estilos para las pestañas */
+.tab-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(74, 222, 128, 0.2);
+  padding-bottom: 0.5rem;
+  position: sticky;
+  top: 0;
+  background: rgba(17, 24, 39, 0.95);
+  z-index: 10;
+  padding: 1rem 0;
+  margin-top: -2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button:hover {
+  color: white;
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.tab-button.active {
+  color: #00ff00;
+  background: rgba(74, 222, 128, 0.1);
+  border-bottom: 2px solid #00ff00;
+}
+
+/* Contenido de las pestañas */
+.tab-pane {
+  color: white;
+  padding: 1rem 0;
+}
+
+.tab-pane h1 {
+  color: #00ff00;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.text-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+/* Estilos para la sección de intereses */
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.interest-card {
+  background: rgba(31, 41, 55, 0.7);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 222, 128, 0.1);
+}
+
+.interest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.interest-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.interest-card h3 {
+  color: #00ff00;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.interest-card p {
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Estilos para la sección de certificados */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.certificate-card {
+  background: rgba(31, 41, 55, 0.7);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 222, 128, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+}
+
+.certificate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.certificate-card h3 {
+  color: #00ff00;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.certificate-card p {
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.certificate-card .button-glow {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.75rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.certificate-card .button-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #00ff00;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.certificate-card .button-glow:hover {
+  color: #0a192f;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.certificate-card .button-glow:hover::before {
+  width: 100%;
+}
+
+/* Estilos para la sección de educación */
+.education-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.education-item {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid #00ff00;
+}
+
+.education-item h3 {
+  color: #00ff00;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.education-item p {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Botones */
+.button-glow {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: #00ff00;
+  color: #111827;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.button-glow:hover {
+  background: #3bd171;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px -5px rgba(74, 222, 128, 0.5);
+}
+
+/* Efecto de brillo al pasar el ratón sobre los botones */
+.button-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.button-glow:hover::after {
+  left: 100%;
+  opacity: 1;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .historia-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagen-col {
+    width: 60%;
+    height: 50vh;
+    margin-bottom: 2rem;
+  }
+  
+  .contenido-col {
+    width: 90%;
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .imagen-col {
+    width: 80%;
+    height: 40vh;
+  }
+  
+  .contenido-col {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .tab-container {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    margin-top: 0;
+    position: static;
+  }
+  
+  .tab-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .tab-button {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+  }
+  
+  .interests-grid,
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tab-pane h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Estilos específicos para la página Historia */
 .history-timeline {
   position: relative;
   max-width: 1200px;
@@ -62,27 +476,13 @@
   right: -10px;
 }
 
-.historia-section {
-  position: relative;
-  min-height: 100vh;
-  background: linear-gradient(to bottom left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.81)),
-              url('../../imagenes/gustavo.png');
-  background-size: 20%;
-  background-position: 10% center;
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /*margin-top: 100px;*/
-  bottom: 0px;
-}
-
-
 .historia-content {
   position: relative;
-  z-index: 1;
-  left: 540px;
-  margin-top: 100px !important;
-  width: 40%; /* Ajustamos el ancho para que el contenido no se extienda demasiado */
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .historia-title {
@@ -110,7 +510,6 @@
 }
 
 .historia-content:before{
-
   content: '';
   width: 1690px;
   height: 1780px;
@@ -133,7 +532,6 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 255, 0, 0.1);
   transition: all 0.3s ease;
-
 }
 
 .historia-card:hover {
@@ -158,9 +556,12 @@
   color: #87ceeb;
   line-height: 1.6;
 }
+
 .cardss{
   width: 20%;
 }
+
+/* Estilos responsivos */
 @media (max-width: 768px) {
   .historia-content {
     max-width: 100%;

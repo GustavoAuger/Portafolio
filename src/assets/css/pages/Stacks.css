@@ -1,16 +1,39 @@
 /* Estilos específicos para la página Stacks */
 
+
+.stack{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../imagenes/stack.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  padding: 2rem 0;
+  
+}
+.stack::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: -1;
+}
+
 .stacks-page {
   padding: 5rem 0;
   min-height: 100vh;
-  background: inherit;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #00ff00;
-  margin-top: 50px!important;
 }
 
 .stacks-section {
@@ -25,31 +48,25 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
+@media (min-width: 768px) {
 .stack-container {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 80%;
+}
 }
 
-@media (min-width: 768px) {
-  .stack-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding: 0 2rem;
-  }
-}
 
 .stack-card {
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 15px;
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 10px;
   padding: 2rem;
   transition: all 0.3s ease;
-  border: 1px solid rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.2);
   position: relative;
 }
 
@@ -65,9 +82,9 @@
   transition: opacity 0.3s ease;
 }
 
-.stack-card:hover {
+.stack-card:hover { 
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 255, 0, 0.1);
 }
 
 .stack-card:hover::before {

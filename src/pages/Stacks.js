@@ -51,7 +51,7 @@ const Stacks = () => {
   ];
 
   return (
-    <section>
+    <section className="stack"> 
        <SocialLinks />
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -59,7 +59,7 @@ const Stacks = () => {
       exit={{ opacity: 0, x: -100 }}
       className="stacks-page"
     >
-      <div className="container stacks-container">
+      <div className="container-fluid stacks-container">
         <div className="row justify-content-center">
           <div className="col-11 ">
             <motion.h1

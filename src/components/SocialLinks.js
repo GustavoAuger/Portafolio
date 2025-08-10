@@ -34,16 +34,7 @@ const SocialLinks = () => {
           aria-hidden="true" 
         > </a>
       </div>
-      <div id="twitter">
-        <a
-          href="https://twitter.com/"  
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fab fa-twitter"
-          aria-label="Twitter"  
-          aria-hidden="true" 
-        > </a>
-      </div>
+
     </div>
   );
 };
