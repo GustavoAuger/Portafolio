@@ -26,12 +26,13 @@ const SocialLinks = () => {
       </div>
       <div id="instagram">
         <a
-          href="https://www.instagram.com/nivel11_cl/"
+          href="https://drive.google.com/drive/u/0/folders/1IL5utr5RDDrFZzc2OIoTSRoMvowcSLvH"
           target="_blank"
           rel="noopener noreferrer"
-          className="fab fa-instagram"
-          aria-label="Instagram"  
-          aria-hidden="true" 
+          className="fas fa-file-pdf"
+          aria-label="CV"  
+          aria-hidden="true"
+          title="Ver mi CV" 
         > </a>
       </div>
 

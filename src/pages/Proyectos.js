@@ -4,8 +4,17 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import SocialLinks from '../components/SocialLinks';
 import diagramaVPC from '../assets/imagenes/Arquitectura-VPC.png';
+import imagenDJEventHub1 from '../assets/imagenes/djeventhub1.png';
+import imagenDJEventHub2 from '../assets/imagenes/djeventhub2.png';
+import imagenIncidencias1 from '../assets/imagenes/incidencias1.png';
+import imagenIncidencias2 from '../assets/imagenes/incidencias2.png';
+import imagenTallerRayoMaqueen1 from '../assets/imagenes/taller1.png';
+import imagenTallerRayoMaqueen2 from '../assets/imagenes/taller2.png';
+import imagenRestaurant1 from '../assets/imagenes/restaurant1.png'; 
+import imagenRestaurant2 from '../assets/imagenes/restaurant2.png';
 import '../assets/css/pages/Proyectos.css';
 import ManualRedesEC2NAT from '../assets/imagenes/ManualRedesEC2NAT.pdf';
+
 
 
 // Componente PDFViewer mejorado
@@ -245,38 +254,38 @@ const proyectosDesarrollo = [
   {
     id: 1,
     titulo: 'Sistema de Incidencias HEAD',
-    descripcion: 'Sistema de Incidencias par recepcion de mercaderia HEAD',
-    tecnologias: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    imagenes: ['/img/proyectos/ecommerce-1.jpg', '/img/proyectos/ecommerce-2.jpg'],
-    enlace: 'https://ejemplo-ecommerce.com',
-    github: 'https://github.com/tuusuario/ecommerce'
+    descripcion: 'Sistema de gestión de incidencias para la recepción de mercadería en HEAD. Proyecto de título desarrollado en colaboración con dos compañeros. Me encargué del backend, el diseño de la arquitectura, la administración de base de datos (DBA) y el despliegue tanto del backend como del frontend. Además, colaboré en el desarrollo del frontend, especialmente en la implementación de funcionalidades y validaciones.',
+    tecnologias: ['Angular', 'FastAPI', 'tailwindcss', 'HTML5/CSS3', 'typescript', 'python', 'JWT', 'vercel', 'render', 'supabase'],
+    imagenes: [imagenIncidencias1, imagenIncidencias2],
+    enlace: 'https://incidencia-front.vercel.app/home',
+    github: 'https://github.com/GustavoAuger/IncidenciaFront'
   },
   {
     id: 2,
     titulo: 'Landing Page DJEventHub',
-    descripcion: 'Landing Page para anclar a la app DJEventHub.',
-    tecnologias: ['React', 'Sass', 'JavaScript', 'Node.js (dev)', 'HTML5/CSS3'],
-    imagenes: ['/img/proyectos/ecommerce-1.jpg', '/img/proyectos/ecommerce-2.jpg'],
+    descripcion: 'Landing Page para anclar a la app DJEventHub, es una web sencilla con un diseño minimalista pero llamativo visualmente. ',
+    tecnologias: ['React', 'Sass', 'JavaScript', 'HTML5/CSS3', 'vercel'],
+    imagenes: [imagenDJEventHub1, imagenDJEventHub2],
     enlace: 'https://landing-djevent-hub.vercel.app/',
     github: 'https://github.com/GustavoAuger/LandingDjeventHub'
   },
   {
     id: 3,
     titulo: 'Taller de autos Rayo Maqueen',
-    descripcion: 'Landing Page para anclar a la app DJEventHub.',
-    tecnologias: ['React', 'Sass', 'JavaScript', 'Node.js (dev)', 'HTML5/CSS3'],
-    imagenes: ['/img/proyectos/ecommerce-1.jpg', '/img/proyectos/ecommerce-2.jpg'],
-    enlace: 'https://landing-djevent-hub.vercel.app/',
-    github: 'https://github.com/GustavoAuger/LandingDjeventHub'
+    descripcion: 'Web app desarrollada durante mi perioodo de univerisdad. Su funcionalidad principal es la gestión de venta de repuestos y servicios de repración/mantenimiento de autos.',
+    tecnologias: ['Django','Python', 'sqlite', 'HTML5/CSS3', 'render'],
+    imagenes: [imagenTallerRayoMaqueen1, imagenTallerRayoMaqueen2],
+    enlace: 'https://tallerrayomaq.onrender.com/',
+    github: 'https://github.com/GustavoAuger/tallerRayoMaq'
   },
   {
     id: 4,
-    titulo: 'Proyecto en Desarrollo',
-    descripcion: 'Landing Page para anclar a la app DJEventHub.',
-    tecnologias: ['React', 'Sass', 'JavaScript', 'Node.js (dev)', 'HTML5/CSS3'],
-    imagenes: ['/img/proyectos/ecommerce-1.jpg', '/img/proyectos/ecommerce-2.jpg'],
+    titulo: 'Proyecto Restaurant',
+    descripcion: 'Proyecto desarrollado durante mi periodo de práctica. Esta es una web app pensanda para dispositivos móviles: su funcionalidad principal es la toma de pedidos, gestion de mesas y cocina.',
+    tecnologias: ['Vue', 'Tailwindcss', 'JavaScript', 'Node.js (dev)', 'MySQL', 'PHP', 'Laravel', 'HTML5/CSS3'],
+    imagenes: [imagenRestaurant1, imagenRestaurant2],
     enlace: 'https://landing-djevent-hub.vercel.app/',
-    github: 'https://github.com/GustavoAuger/LandingDjeventHub'
+    github: 'https://github.com/GustavoAuger/restaurant'
   }
 ];
 
