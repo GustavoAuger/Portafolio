@@ -284,7 +284,7 @@ const proyectosDesarrollo = [
     descripcion: 'Proyecto desarrollado durante mi periodo de práctica. Esta es una web app pensanda para dispositivos móviles: su funcionalidad principal es la toma de pedidos, gestion de mesas y cocina.',
     tecnologias: ['Vue', 'Tailwindcss', 'JavaScript', 'Node.js (dev)', 'MySQL', 'PHP', 'Laravel', 'HTML5/CSS3'],
     imagenes: [imagenRestaurant1, imagenRestaurant2],
-    enlace: 'https://landing-djevent-hub.vercel.app/',
+    enlace: 'https://github.com/GustavoAuger/restaurant',
     github: 'https://github.com/GustavoAuger/restaurant'
   }
 ];
@@ -307,11 +307,11 @@ const proyectosDevOps = [
     titulo: 'CI/CD Pipeline',
     descripcion: 'Implementación de un pipeline de integración y despliegue continuo con GitHub Actions y Docker.',
     tecnologias: ['GitHub Actions', 'Docker', 'AWS', 'Terraform'],
-    enlace: 'https://github.com/tuusuario/devops-pipeline',
+    enlace: 'https://github.com/GustavoAuger/devops-pipeline',
     icono: '🔄',
     diagrama: 'https://example.com/diagrama-cicd-pipeline.png',
     manualPdf: 'https://example.com/manual-cicd-pipeline.pdf',
-    codigoTerraform: 'https://github.com/tuusuario/cicd-pipeline-terraform'
+    codigoTerraform: 'https://github.com/GustavoAuger/cicd-pipeline-terraform'
   },
 ];
 
@@ -424,12 +424,20 @@ export default function Proyectos() {
                       {proyecto.imagenes && proyecto.imagenes.length > 0 && (
                         <div className="proyecto-galeria">
                           {proyecto.imagenes.map((img, index) => (
-                            <img 
+                            <div 
                               key={index} 
-                              src={img} 
-                              alt={`Captura ${index + 1} del proyecto ${proyecto.titulo}`}
-                              className="proyecto-imagen"
-                            />
+                              className="proyecto-imagen-contenedor"
+                              onClick={() => abrirModal(img, `${proyecto.titulo} - Captura ${index + 1}`)}
+                            >
+                              <img 
+                                src={img} 
+                                alt={`Captura ${index + 1} del proyecto ${proyecto.titulo}`}
+                                className="proyecto-imagen"
+                              />
+                              <div className="proyecto-imagen-overlay">
+                                <i className="bi bi-zoom-in"></i>
+                              </div>
+                            </div>
                           ))}
                         </div>
                       )}

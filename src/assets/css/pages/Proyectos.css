@@ -10,8 +10,9 @@
   background-attachment: fixed;
   z-index: 1;
   padding: 2rem 0;
-  
+  overflow-x: hidden; 
 }
+
 .proyecto::before {
   content: '';
   position: absolute;
@@ -22,6 +23,7 @@
   background: rgba(0, 0, 0, 0.85);
   z-index: -1;
 }
+
 .proyectos-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -130,11 +132,14 @@
 .proyecto-contenido {
   padding: 0 1.5rem;
   max-height: 0;
-  transition: max-height 0.5s ease, padding 0.5s ease;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  padding: 0 1rem;
 }
 
 .proyecto-card.expandido .proyecto-contenido {
-  padding: 0 1.5rem 2rem;
+  padding: 1rem;
   max-height: 2000px; /* Ajusta según sea necesario */
 }
 
@@ -186,7 +191,6 @@
   margin-right: 5px;
   margin-bottom:5px;
   display: inline-flex
-
 }
 
 /* Enlaces */
@@ -303,6 +307,65 @@
   font-size: 1.5rem;
   margin-bottom: 0.3rem;
   display: block;
+}
+
+/* Estilos para el contenedor de la imagen */
+.proyecto-imagen-contenedor {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-imagen-contenedor:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos para la superposición al pasar el mouse */
+.proyecto-imagen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.proyecto-imagen-contenedor:hover .proyecto-imagen-overlay {
+  opacity: 1;
+}
+
+.proyecto-imagen-overlay i {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Asegurar que la imagen ocupe todo el espacio disponible */
+.proyecto-imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajustes para la galería */
+.proyecto-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .proyecto-galeria {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Ajustes para pantallas pequeñas */
@@ -691,7 +754,7 @@
   background: #0a192f;
   border-radius: 12px;
   max-width: 90%;
-  max-height: 90vh;
+  max-height: 85vh;
   width: 1000px;
   display: flex;
   flex-direction: column;
@@ -872,4 +935,111 @@
 
 .modal-diagrama-cuerpo::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 255, 0, 0.5);
+}
+
+/* Asegurar que el body no tenga overflow oculto que pueda afectar el scroll */
+body {
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+/* Ajustes para el modal */
+.modal-diagrama-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto; /* Permite scroll en el modal si es necesario */
+  padding: 2rem 0;
+}
+
+/* Asegurar que el contenedor principal no tenga overflow oculto */
+#root {
+  overflow-x: hidden;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .proyectos-container {
+    padding: 1rem;
+    padding-top: 6rem; /* Más espacio para el menú móvil */
+  }
+  
+  .proyecto-card.expandido .proyecto-contenido {
+    max-height: none; /* Permite que el contenido se expanda según sea necesario */
+  }
+}
+
+/* Contenedor principal de proyectos */
+.proyecto {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('../../imagenes/proyecto.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 1;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.proyectos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+  min-height: 100vh;
+  padding-top: 4rem;
+}
+
+.proyecto-contenido {
+  padding: 0 1.5rem;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  padding: 0 1rem;
+}
+
+.proyecto-card.expandido .proyecto-contenido {
+  padding: 1rem;
+  max-height: 2000px; /* Ajusta según sea necesario */
+}
+
+.modal-diagrama-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem 0;
+}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .proyectos-container {
+    padding: 1rem;
+    padding-top: 6rem;
+  }
+  
+  .proyecto-card.expandido .proyecto-contenido {
+    max-height: none;
+  }
 }
