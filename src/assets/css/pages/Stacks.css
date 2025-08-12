@@ -11,7 +11,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: 1;
-  padding: 2rem 0;
+
+  
   
 }
 .stack::before {
@@ -26,10 +27,9 @@
 }
 
 .stacks-page {
-  padding: 5rem 0;
+  padding: 6rem 0;
   min-height: 100vh;
   position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -183,3 +183,48 @@
   background: #00ff00;
   transition: transform 0.3s ease;
 }
+
+
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .stacks-page {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .proyectos-container {
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+  .proyecto-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proyecto-header h3 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 577px) {
+  .stacks-page {
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+  .categorias {
+    gap: 0.5rem;
+  }
+  
+  .categoria-btn {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .titulo-seccion {
+    font-size: 1.75rem;
+  }
+  
+  .proyecto-header h3 {
+    font-size: 1rem;
+  }
+}
+

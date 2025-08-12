@@ -294,10 +294,9 @@ body, html {
 }
 
 .button-container span {
-  color: white;
-  font-size: 1.2rem;
-  margin-right: 1rem;
-  font-weight: 600;
+
+  margin-right: .5rem;
+
 }
 
 .whatsapp-icon {
@@ -363,7 +362,7 @@ p { font-size: 0.9rem; }
   h4 { font-size: 1rem; }
   h5 { font-size: 0.9rem; }
   h6 { font-size: 0.7rem; }
-  p { font-size: 0.65rem; }
+
   .banner-1 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -380,4 +379,186 @@ p { font-size: 0.9rem; }
   }
   .logo { font-size: 20px; }
   .red { font-size: 12px; }
+}
+
+/* Estilos para el menú de navegación */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.navbar.scrolled {
+  background-color: rgba(3, 0, 63, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  z-index: 1001;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+  transform: translateY(-8px);
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+  transform: translateY(8px);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+}
+
+/* Estilos para el menú desplegable */
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav {
+  padding: 1rem 0;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  padding: 0.8rem 1rem !important;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #00ff00 !important;
+  transform: translateX(5px);
+}
+
+.nav-link i {
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Estilos para móviles */
+@media (max-width: 991.98px) {
+  .red{
+    display:none;
+  }
+  .logo{
+    display:none;
+  }
+  .navbar{
+    margin-top: 20px;
+  }
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(3, 0, 63, 0.98);
+    z-index: 1000;
+    padding: 80px 20px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .navbar-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+
+  .navbar-collapse.show .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Añadir transiciones escalonadas para los elementos del menú */
+  .navbar-collapse.show .nav-item:nth-child(1) { transition-delay: 0.1s; }
+  .navbar-collapse.show .nav-item:nth-child(2) { transition-delay: 0.15s; }
+  .navbar-collapse.show .nav-item:nth-child(3) { transition-delay: 0.2s; }
+  .navbar-collapse.show .nav-item:nth-child(4) { transition-delay: 0.25s; }
+  .navbar-collapse.show .nav-item:nth-child(5) { transition-delay: 0.3s; }
+}
+
+/* Estilos para desktop */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-link {
+    margin: 0 5px;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 15%;
+    width: 0;
+    height: 2px;
+    background-color: #00ff00;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    width: 70%;
+  }
+  
+  .nav-link i {
+    display: inline-block;
+  }
+}
+
+/* Evitar scroll cuando el menú está abierto */
+body.menu-open {
+  overflow: hidden;
 }

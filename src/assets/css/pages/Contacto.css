@@ -9,7 +9,19 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: 1;
-  padding: 2rem 0;
+  padding: 6rem 0;
+}
+.form-control::placeholder {
+  color: #96a0a8!important;
+  opacity: .5;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #96a0a8!important;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #96a0a8!important;
 }
 
 .contacto::before {
@@ -59,6 +71,8 @@
   opacity: 1;
 }
 
+
+
 .contact-button {
   width: 100%;
   padding: 0.8rem;
@@ -103,11 +117,15 @@
 
 /* Ajustes para móviles */
 @media (max-width: 768px) {
+
   .contacto {
-    padding: 1.5rem 0;
+    padding: 5rem 0;
   }
   
-  .contacto::before {
-    background: rgba(0, 0, 0, 0.9);
+}
+@media (max-width: 992px) {
+  .contacto {
+    padding: 5rem 0;
   }
+
 }

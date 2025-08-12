@@ -11,7 +11,7 @@ const Contacto = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        className="contacto min-vh-100 d-flex align-items-center py-5"
+        className="contacto min-vh-100 d-flex"
       >
         <div className="container">
           <div className="row justify-content-center">
@@ -100,34 +100,29 @@ const Contacto = () => {
               <div className="p-4 h-100">
               
                 <form className="contact-form">
-                  <div className="mb-3">
+                  <div>
                     <label htmlFor="nombre" className="form-label text-white">Nombre:</label>
                     <input 
                       type="text" 
                       className="form-control bg-transparent text-white border-secondary" 
                       id="nombre" 
-                      placeholder="Tu nombre"
+                      placeholder="Ingrese su nombre"
                       required 
-                      style={{
-                        '::placeholder': { color: '#6c757d' },
-                        ':-ms-input-placeholder': { color: '#6c757d' },
-                        '::-ms-input-placeholder': { color: '#6c757d' }
-                      }}
                     />
                   </div>
                   
-                  <div className="mb-3">
+                  <div>
                     <label htmlFor="email" className="form-label text-white">Email:</label>
                     <input 
                       type="email" 
                       className="form-control bg-transparent text-white border-secondary" 
                       id="email" 
-                      placeholder="tu@email.com"
+                      placeholder="Ingrese su email"
                       required 
                     />
                   </div>
                   
-                  <div className="mb-4">
+                  <div>
                     <label htmlFor="mensaje" className="form-label text-white">Mensaje:</label>
                     <textarea 
                       className="form-control bg-transparent text-white border-secondary" 

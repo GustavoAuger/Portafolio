@@ -12,6 +12,7 @@ import imagenTallerRayoMaqueen1 from '../assets/imagenes/taller1.png';
 import imagenTallerRayoMaqueen2 from '../assets/imagenes/taller2.png';
 import imagenRestaurant1 from '../assets/imagenes/restaurant1.png'; 
 import imagenRestaurant2 from '../assets/imagenes/restaurant2.png';
+import imagenTerraformCICD from '../assets/imagenes/contruccion.png';
 import '../assets/css/pages/Proyectos.css';
 import ManualRedesEC2NAT from '../assets/imagenes/ManualRedesEC2NAT.pdf';
 
@@ -296,7 +297,7 @@ const proyectosDevOps = [
     titulo: 'Arquitectura VPC Segura en AWS',
     descripcion: 'Red aislada con subred pública y privada, acceso seguro SSH a instancia privada vía salto desde instancia pública. Automatización con Terraform.',
     tecnologias: ['AWS', 'VPC', 'EC2', 'IGW','Networking', 'NAT Gateway', 'Terraform'],
-    enlace: '/proyectos/devops/vpc-segura',
+    enlace: '',
     icono: '🛡️',
     diagrama: diagramaVPC,
     manualPdf: ManualRedesEC2NAT,
@@ -304,14 +305,14 @@ const proyectosDevOps = [
   },
   {
     id: 2,
-    titulo: 'CI/CD Pipeline',
-    descripcion: 'Implementación de un pipeline de integración y despliegue continuo con GitHub Actions y Docker.',
-    tecnologias: ['GitHub Actions', 'Docker', 'AWS', 'Terraform'],
-    enlace: 'https://github.com/GustavoAuger/devops-pipeline',
+    titulo: 'CI/CD Pipeline IAC & despliegue',
+    descripcion: 'Implementación de un pipeline de integración desde su infraestuctura hasta despliegue de código y pruebas de seguridad con Snyk.',
+    tecnologias: ['GitHub Actions', 'Docker', 'AWS', 'Terraform', 'SNS', 'SQS', 'Lambda', 'API Gateway', 'EC2', 'ECR', 'Snyk'],
+    enlace: '',
     icono: '🔄',
-    diagrama: 'https://example.com/diagrama-cicd-pipeline.png',
-    manualPdf: 'https://example.com/manual-cicd-pipeline.pdf',
-    codigoTerraform: 'https://github.com/GustavoAuger/cicd-pipeline-terraform'
+    diagrama: imagenTerraformCICD,
+    manualPdf: imagenTerraformCICD,
+    codigoTerraform: 'https://github.com/GustavoAuger/Terraform-CICD/actions/runs/12627823797'
   },
 ];
 

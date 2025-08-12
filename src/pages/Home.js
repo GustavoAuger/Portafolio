@@ -65,7 +65,7 @@ const Home = () => {
                     </a>
                   </div>
                 </div>
-                <div className="col-lg-5 text-center">
+                <div className="col-lg-5 text-center absolute">
                   <div className="homepage_banner animated bounceInUp">
                     <img src={portada} alt="Portada" />
                   </div>
