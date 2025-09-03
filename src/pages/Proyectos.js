@@ -12,6 +12,7 @@ import imagenTallerRayoMaqueen1 from '../assets/imagenes/taller1.png';
 import imagenTallerRayoMaqueen2 from '../assets/imagenes/taller2.png';
 import imagenRestaurant1 from '../assets/imagenes/restaurant1.png'; 
 import imagenRestaurant2 from '../assets/imagenes/restaurant2.png';
+import videoRestaurant from '../assets/imagenes/rest.mp4';
 import imagenTerraformCICD from '../assets/imagenes/contruccion.png';
 import '../assets/css/pages/Proyectos.css';
 import ManualRedesEC2NAT from '../assets/imagenes/ManualRedesEC2NAT.pdf';
@@ -250,12 +251,68 @@ const PdfModal = ({ isOpen, onClose, pdfUrl }) => {
   );
 };
 
+// Componente Modal para el video
+const VideoModal = ({ isOpen, onClose, videoUrl }) => {
+  if (!isOpen) return null;
+  
+  return (
+    <div style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(0,0,0,0.9)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000,
+    }} onClick={onClose}>
+      <div style={{
+        position: 'relative',
+        width: '80%',
+        maxWidth: '800px',
+        padding: '20px',
+        backgroundColor: 'transparent',
+      }} onClick={e => e.stopPropagation()}>
+        <button 
+          onClick={onClose}
+          style={{
+            position: 'absolute',
+            top: '-40px',
+            right: '0',
+            background: 'transparent',
+            border: 'none',
+            color: '#fff',
+            fontSize: '24px',
+            cursor: 'pointer',
+          }}
+        >
+          &times;
+        </button>
+        <video 
+          controls 
+          autoPlay 
+          style={{
+            width: '100%',
+            maxHeight: '80vh',
+            outline: 'none',
+          }}
+        >
+          <source src={videoUrl} type="video/mp4" />
+          Tu navegador no soporta la reproducción de videos.
+        </video>
+      </div>
+    </div>
+  );
+};
+
 // proyectos de desarrollo 
 const proyectosDesarrollo = [
   {
     id: 1,
     titulo: 'Sistema de Incidencias HEAD',
-    descripcion: 'Sistema de gestión de incidencias para la recepción de mercadería en HEAD. Proyecto de título desarrollado en colaboración con dos compañeros. Me encargué del backend, el diseño de la arquitectura, la administración de base de datos (DBA) y el despliegue tanto del backend como del frontend. Además, colaboré en el desarrollo del frontend, especialmente en la implementación de funcionalidades y validaciones.',
+    descripcion: 'Sistema de gestión de incidencias para la recepción de mercadería en HEAD. Proyecto de título desarrollado en colaboración con dos compañeros. Me encargué del backend, el diseño de la arquitectura, la administración de base de datos (DBA) y el despliegue tanto del backend como del frontend. Además, colaboré en el desarrollo del frontend, especialmente en la implementación de funcionalidades y validaciones. Puedes ingresar al proyecto con la cuenta de usuario: admin2@head.com y contraseña: Password1, Seleccionas el rol que quieres adoptar y puedes ver los diferentes roles disponibles para explorar. Desplegado en Vercel (frontend), Render (backend) y Supabase (BD).',
     tecnologias: ['Angular', 'FastAPI', 'tailwindcss', 'HTML5/CSS3', 'typescript', 'python', 'JWT', 'vercel', 'render', 'supabase'],
     imagenes: [imagenIncidencias1, imagenIncidencias2],
     enlace: 'https://incidencia-front.vercel.app/home',
@@ -273,7 +330,7 @@ const proyectosDesarrollo = [
   {
     id: 3,
     titulo: 'Taller de autos Rayo Maqueen',
-    descripcion: 'Web app desarrollada durante mi perioodo de univerisdad. Su funcionalidad principal es la gestión de venta de repuestos y servicios de repración/mantenimiento de autos.',
+    descripcion: 'Web app desarrollada durante mi perioodo de univerisdad. Su funcionalidad principal es la gestión de venta de repuestos y servicios de repración/mantenimiento de autos. Su Desarrollo fue con Django y Python, despliegue en Render. Utilizando SQLite como base de datos. Diseño simple y funcional optimizable.',
     tecnologias: ['Django','Python', 'sqlite', 'HTML5/CSS3', 'render'],
     imagenes: [imagenTallerRayoMaqueen1, imagenTallerRayoMaqueen2],
     enlace: 'https://tallerrayomaq.onrender.com/',
@@ -321,6 +378,7 @@ export default function Proyectos() {
   const [categoriaActiva, setCategoriaActiva] = useState('desarrollo');
   const [modalAbierto, setModalAbierto] = useState(false);
   const [modalPdfAbierto, setModalPdfAbierto] = useState(false);
+  const [modalVideoAbierto, setModalVideoAbierto] = useState(false);
   const [imagenModal, setImagenModal] = useState('');
   const [pdfUrl, setPdfUrl] = useState('');
   const [tituloModal, setTituloModal] = useState('');
@@ -362,6 +420,18 @@ export default function Proyectos() {
     document.body.style.overflow = 'unset';
   };
 
+  // Función para abrir el modal del video
+  const abrirModalVideo = () => {
+    setModalVideoAbierto(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Función para cerrar el modal del video
+  const cerrarModalVideo = () => {
+    setModalVideoAbierto(false);
+    document.body.style.overflow = 'unset';
+  };
+
   const toggleProyecto = (id) => {
     setProyectoExpandido(proyectoExpandido === id ? null : id);
   };
@@ -382,6 +452,13 @@ export default function Proyectos() {
         isOpen={modalPdfAbierto}
         onClose={cerrarModalPdf}
         pdfUrl={pdfUrl}
+      />
+
+      {/* Modal para el video */}
+      <VideoModal
+        isOpen={modalVideoAbierto}
+        onClose={cerrarModalVideo}
+        videoUrl={videoRestaurant}
       />
 
       <div className="social-links-container fixed top-4 right-4 z-20">
@@ -453,11 +530,19 @@ export default function Proyectos() {
                       </div>
                       
                       <div className="proyecto-enlaces">
-                        {proyecto.enlace && (
+                        {proyecto.id === 4 ? (
+                          <button 
+                            onClick={abrirModalVideo}
+                            className="enlace-btn"
+
+                          >
+                            Ver Proyecto
+                          </button>
+                        ) : proyecto.enlace ? (
                           <a href={proyecto.enlace} target="_blank" rel="noopener noreferrer" className="enlace-btn">
                             Ver Proyecto
                           </a>
-                        )}
+                        ) : null}
                         {proyecto.github && (
                           <a href={proyecto.github} target="_blank" rel="noopener noreferrer" className="enlace-btn github">
                             Ver en GitHub
